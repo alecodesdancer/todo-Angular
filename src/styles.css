@@ -1,1 +1,41 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+    margin: 0;
+    font-family: 'Questrial', sans-serif;
+}
+
+/* icon size*/
+.md-18{
+    font-size: 18px;
+  }
+
+/* container */
+.card{
+border-radius: 0.5rem;
+border: 1px solid rgb(156, 159, 161);
+padding: 0.5rem;
+text-align: left;
+display: flex;
+align-items: center;
+justify-content: space-between;
+margin: 0.2rem 0 ;
+border-left-color: salmon;
+border-left-width: 0.7rem;
+}
+
+.card-LOW{
+border-left-color: #CFCFCF;
+}
+
+.card-MEDIUM{
+border-left-color: #ffc107;
+}
+
+.card-HIGH{
+border-left-color: #FF7D23;
+}
+
+.card-TOP{
+border-left-color: #FF3119;
+}
+  

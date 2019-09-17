@@ -1,0 +1,33 @@
+<div class="wrapper">
+    <div class="container">
+        <h1 class="title">To-do list</h1>
+
+        <app-add-task (newTask)="handleNewTask($event)"></app-add-task>
+
+        <div class="container-tasks" *ngIf="inProcessTasks.length > 0">
+            <h2 class="subtitle">Doing</h2>
+            <app-task-list *ngFor="let task of inProcessTasks"
+                [task]="task"  (doneEvent)="handleDone($event)" (editEvent)="handleEdit($event)" (startEvent)="handleStart($event)"
+            ></app-task-list>
+        </div>
+
+        <div class="container-tasks" *ngIf="todoTasks.length > 0">
+            <h2 class="subtitle">To do</h2>
+            <app-task-list *ngFor="let task of todoTasks"
+                [task]="task"  (doneEvent)="handleDone($event)" (editEvent)="handleEdit($event)" (startEvent)="handleStart($event)"
+            ></app-task-list>
+        </div>
+
+        <div class="container-tasks" *ngIf="doneTasks.length > 0">
+            <h2 class="subtitle">Done</h2>
+            <div *ngFor="let task of doneTasks" class="card done " [ngClass]=" 'card-'+ (task.type) " >  
+                {{task.description}}
+            </div>
+        </div>
+
+    </div>
+    
+    <div class="details">
+        <app-task-details *ngIf="edit" [(task)]="taskEdit" (saveEvent)="handleSaveChanges($event)" (deleteEvent)="handleDelete($event)" ></app-task-details>
+    </div>
+</div>

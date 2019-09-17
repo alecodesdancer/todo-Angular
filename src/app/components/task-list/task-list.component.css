@@ -1,0 +1,19 @@
+/* button */
+.btn{
+  background-color: transparent;
+  border: 0;
+  font-weight: bold;
+  font-size: 1rem;
+  margin: 0 0.1rem;
+  color: rgb(90, 90, 90);
+  cursor: pointer;
+}
+
+.btn:hover{
+  color: salmon;
+}
+
+/* text */
+.text{
+  margin-left: 1rem;
+}

@@ -1,0 +1,16 @@
+<div class="card " [ngClass]=" 'card-'+ (task.type) ">
+    <div>
+        <button *ngIf="task.status === 'INPROCESS'" class="btn" (click)="handleDone()">
+            <i class="material-icons-outlined md-18">check</i>
+        </button>
+        <button *ngIf="task.status === 'TODO'" class="btn" (click)="handleStart()">
+                <i class="material-icons-outlined md-18">play_arrow</i>
+        </button>
+        
+        <button class="btn" (click)="handleEdit()">
+                <i class="material-icons-outlined md-18">edit</i>
+        </button>
+        
+        <label class="text">{{task.description}}</label>
+    </div>
+</div>

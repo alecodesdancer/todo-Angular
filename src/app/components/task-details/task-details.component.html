@@ -1,0 +1,25 @@
+<div class="detail-card">
+    <input 
+        [(ngModel)]="description" 
+        name="description"
+        class="input">
+
+    <div class="form-group">
+        <label class="align-item-center">Priority</label>
+
+        <button (click)="priorityChange('LOW')" class="btn btn-low" [class.btn-low-selected]="type === 'LOW'"><i class="material-icons-outlined md-18">flag</i></button>
+        <button (click)="priorityChange('MEDIUM')" class="btn btn-medium" [class.btn-medium-selected]="type === 'MEDIUM'"><i class="material-icons-outlined md-18">flag</i></button>
+        <button (click)="priorityChange('HIGH')" class="btn btn-high" [class.btn-high-selected]="type === 'HIGH'"><i class="material-icons-outlined md-18">flag</i></button>
+        <button (click)="priorityChange('TOP')" class="btn btn-top" [class.btn-top-selected]="type === 'TOP'"><i class="material-icons-outlined md-18">flag</i></button>
+    </div>
+
+    <div class="form-group">
+        <textarea class="input" name="notes" [(ngModel)]="notes" placeholder="...Add a note"></textarea>
+    </div>
+
+    <div class="form-group">
+        <button class="btn-flat" (click)="saveChanges()"><i class="material-icons-outlined md-18">save</i> Save</button>
+        <button class="btn-flat btn-danger" (click)="delete()"><i class="material-icons-outlined md-18">delete</i> Delete</button>
+    </div>
+
+</div>

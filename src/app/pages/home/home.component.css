@@ -1,0 +1,36 @@
+/* container */
+
+.wrapper{
+  display: grid;
+  grid-template-areas: "container details";
+  grid-gap: 0.5rem 0.5rem;
+  grid-template-columns: 3fr 1fr;
+}
+
+.container{
+  grid-area: container;
+}
+
+.details{
+  grid-area: details;
+}
+
+.container-tasks{
+  margin: 1rem;
+}
+
+/* text */
+
+.done{
+  text-decoration: line-through;
+  color: rgb(156, 159, 161);
+}
+
+.title{
+  color: #505050;
+}
+
+.subtitle{
+  text-align: left;
+}
+
